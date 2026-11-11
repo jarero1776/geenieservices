@@ -9,12 +9,29 @@
   GEENIE ESTATE SERVICES — single-page site
   ===================================================================
 
+  FILES — keep this structure intact when uploading to a host:
+
+    index.html              <- this file, must stay named index.html
+    images/
+      logo.png              <- header + footer mark
+      favicon.png           <- browser tab icon
+      hero-sorting-keepsakes.jpg
+      summer-portrait.jpg
+      gallery-packing.jpg
+      gallery-settled-in.jpg
+      gallery-estate-sale.jpg
+
+  Upload the index.html file AND the images folder together, keeping the
+  folder alongside the file. Image paths are relative (images/name.jpg),
+  so they work on any host and also when opened straight off a hard drive.
+  To swap a photo, drop the new file in images/ using the SAME filename —
+  no HTML editing needed. If the new photo has different proportions,
+  update that <img> tag's width and height attributes to match.
+
   BRAND
     Name   : Geenie Estate Services (a play on owner Summer Gee's surname)
-    Logo   : navy + gold genie-with-lamp mark, embedded in this file as a
-             base64 data URI (header, footer, favicon). To replace it, swap
-             the data:image/png;base64,... strings, or upload the new file
-             and point src= at its URL instead.
+    Logo   : navy + gold genie-with-lamp mark, images/logo.png
+             (transparent background, so it sits on any color)
     Navy   : #0B2559  — brand primary, carries all small text
     Gold   : #D8B154  — DECORATION ONLY, see the note in :root
     Canvas : #FBFAF7  — warm off-white
@@ -25,15 +42,18 @@
      Currently: (425) 555-0100   /   tel:+14255550100
   2. EMAIL — appears 3x: JSON-LD, Contact section, footer.
      Currently: hello@geenieestateservices.com
-  3. OWNER PORTRAIT — the <img> in the "Why Geenie" section.
-  4. GALLERY PHOTOS — the three <img> tags in the "Our Work" section.
+  3. OWNER PORTRAIT — images/summer-portrait.jpg
+  4. GALLERY PHOTOS — the three images/gallery-*.jpg files.
      Replace with real job photos (with client permission) as soon as
      they exist; real photos convert far better than any placeholder.
   5. LICENSING LINE — see the FAQ item marked "UPDATE WHEN FINALIZED".
      It is deliberately worded in general terms right now.
   6. CONTACT FORM — the form does not send anywhere yet. See the
      comment above the <form> tag for the two options to wire it up.
-  7. DOMAIN — update the og:url and JSON-LD "url" once the domain is live.
+  7. DOMAIN — update og:url, og:image, canonical, and JSON-LD "url"
+     once the real domain is live. og:image must be a full absolute
+     URL (https://yourdomain.com/images/...) — relative paths do not
+     work for social media link previews.
 
   Deliberately NOT on this page: NASMM claims, insurance/bonding claims,
   testimonials, client counts, pricing figures, years-of-experience count.
@@ -49,13 +69,14 @@
 <meta property="og:title" content="Senior Move Management in Snohomish County | Geenie Estate Services">
 <meta property="og:description" content="One trusted person to plan, sort, pack, and settle you into your new home — plus estate sale coordination across Snohomish County and greater Seattle.">
 <meta property="og:url" content="https://www.geenieestateservices.com/">
-<meta property="og:image" content="https://hyperagent.com/api/files/usergenerated/threads/cmuhxawrd081m07adbbebcb5p/images/b3b879eb-09ca-4818-9c85-70bf6bd0b4a8.png">
+<!-- og:image MUST be an absolute URL — update the domain when the site goes live -->
+<meta property="og:image" content="https://www.geenieestateservices.com/images/hero-sorting-keepsakes.jpg">
 <meta property="og:locale" content="en_US">
 <meta name="theme-color" content="#0B2559">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" type="image/png" href="data:image/png;base64,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">
-<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/favicon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -470,12 +491,6 @@ a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
   font-size:.88rem;color:#97A4BF;
 }
 </style>
-<style>
-.ha-img-placeholder{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;background:#f4f4f5;border:1px dashed #d4d4d8;border-radius:8px;color:#71717a;font-size:12px;font-family:system-ui,sans-serif;min-height:80px;padding:16px;box-sizing:border-box;animation:ha-img-pulse 1.5s ease-in-out infinite}
-.ha-img-placeholder.ha-failed{animation:none;opacity:.7}
-@keyframes ha-img-pulse{0%,100%{opacity:1}50%{opacity:.5}}
-@media(prefers-color-scheme:dark){.ha-img-placeholder{background:#27272a;border-color:#3f3f46;color:#a1a1aa}}
-</style>
 </head>
 <body>
 
@@ -484,7 +499,7 @@ a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href="#top">
-      <img class="brand__mark" src="data:image/png;base64,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" alt="" width="107" height="120" aria-hidden="true">
+      <img class="brand__mark" src="images/logo.png" alt="" width="107" height="120" aria-hidden="true">
       <span>
         <span class="brand__name">Geenie Estate Services</span>
         <span class="brand__sub">Senior Move Management</span>
@@ -529,9 +544,9 @@ a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
 
       <figure class="hero__figure">
         <!-- PLACEHOLDER IMAGE — swap for a real photo when available -->
-        <img src="https://hyperagent.com/api/files/usergenerated/threads/cmuhxawrd081m07adbbebcb5p/images/b3b879eb-09ca-4818-9c85-70bf6bd0b4a8.png"
+        <img src="images/hero-sorting-keepsakes.jpg"
              alt="An older woman and her adult daughter sitting at a dining table, looking through a box of framed family photographs together."
-             width="1344" height="768" fetchpriority="high" decoding="async">
+             width="1400" height="781" fetchpriority="high" decoding="async">
       </figure>
     </div>
   </section>
@@ -640,9 +655,9 @@ a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
     <div class="wrap why__grid">
       <figure class="why__figure">
         <!-- PLACEHOLDER IMAGE — swap for Summer's real photo -->
-        <img src="https://hyperagent.com/api/files/usergenerated/threads/cmuhxawrd081m07adbbebcb5p/images/d9546caa-5db3-45cf-9817-6e800eab0dea.png"
+        <img src="images/summer-portrait.jpg"
              alt="Portrait of Summer Gee, owner of Geenie Estate Services, standing in a bright home interior."
-             width="896" height="1152" loading="lazy" decoding="async">
+             width="800" height="993" loading="lazy" decoding="async">
         <figcaption><strong>Summer Gee</strong> — Owner, Geenie Estate Services</figcaption>
       </figure>
 
@@ -699,21 +714,21 @@ a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
       <!-- PLACEHOLDER IMAGES — replace all three with real job photos (with client permission) -->
       <div class="gallery">
         <figure>
-          <img src="https://hyperagent.com/api/files/usergenerated/threads/cmuhxawrd081m07adbbebcb5p/images/7923474e-c01e-4bcc-8f94-62f4df956703.png"
+          <img src="images/gallery-packing.jpg"
                alt="Neatly stacked and hand-labeled moving boxes in a sunlit bedroom, with packing paper and wrapped china on a dresser."
-               width="1184" height="864" loading="lazy" decoding="async">
+               width="800" height="597" loading="lazy" decoding="async">
           <figcaption>Careful, labeled packing — so unpacking is calm too.</figcaption>
         </figure>
         <figure>
-          <img src="https://hyperagent.com/api/files/usergenerated/threads/cmuhxawrd081m07adbbebcb5p/images/b96a6ea4-8280-41cc-a3f6-c11790b95508.png"
+          <img src="images/gallery-settled-in.jpg"
                alt="A small apartment fully settled after a move, with the bed made, family photos hung, and a reading chair by the window."
-               width="1184" height="864" loading="lazy" decoding="async">
+               width="800" height="597" loading="lazy" decoding="async">
           <figcaption>Move-in day ends with a made bed, not a maze of boxes.</figcaption>
         </figure>
         <figure>
-          <img src="https://hyperagent.com/api/files/usergenerated/threads/cmuhxawrd081m07adbbebcb5p/images/2131580a-36fe-4837-9b3c-bf187479a4e6.png"
+          <img src="images/gallery-estate-sale.jpg"
                alt="An organized estate sale set up in a living room, with glassware, china, and books arranged by category on draped tables."
-               width="1184" height="864" loading="lazy" decoding="async">
+               width="800" height="597" loading="lazy" decoding="async">
           <figcaption>Estate sales staged to sell — organized, priced, and hosted.</figcaption>
         </figure>
       </div>
@@ -925,7 +940,7 @@ a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
     <div class="footer-grid">
       <div>
         <a class="brand" href="#top">
-          <img class="brand__mark" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGsAAAB4CAMAAADCI/wLAAABWGlDQ1BJQ0MgUHJvZmlsZQAAeJx9kLFLw1AQxr9WpaB1EB0cHDKJQ5SSCro4tBVEcQhVweqUvqapkMZHkiIFN/+Bgv+BCs5uFoc6OjgIopPo5uSk4KLleS+JpCJ6j+N+fO+74zggOW5wbvcDqDu+W1zKK5ulLSX1jAS9IAzm8Zyur0r+rj/j/T703k7LWb///43Biukxqp+UGcZdH0ioxPqezyXvE4+5tBRxS7IV8onkcsjngWe9WCC+JlZYzagQvxCr5R7d6uG63WDRDnL7tOlsrMk5lBNYxA48cNgw0IQCHdk//LOBv4BdcjfhUp+FGnzqyZEiJ5jEy3DAMAOVWEOGUpN3ju53F91PjbWDJ2ChI4S4iLWVDnA2Rydrx9rUPDAyBFy1ueEagdRHmaxWgddTYLgEjN5Qz7ZXzWrh9uk8MPAoxNskkDoEui0hPo6E6B5T8wNw6XwBA6diE8HYWhMAAAD/UExURQwULvn6+hwrT5Gj1llaYdKxX3Jycpicp1heb1pql+DPoqSTa52bmOfm4zhEZamqrd3e3XB2h4yRnMq6klpMMnqQyHaGsg8PbYV3WkY5KLe7xnN4h1teamJirDtPg3yDk+zlzN/Den2Dkn9//7zDzDMzOP//ADc7TLa30jxDUf//sd3UtwAA/wBnZwD//7fF3jxEWH//////fzQ5TV+qqv9/f7vEzeG0tNvUvCAlPUA9QLfAzf9//8S6zQAAAAQaRwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP3hOIcAAABAdFJOU/0Q+P7t/gJfpv75/vz97hRUm5P9///+A/7+U21vBv6Xm/9vAlEEAXskfAOoAQIB/p8CAqMDAjsfXbz/nAIaAP60ByY/AAAPCUlEQVR42rVaB3sbuQ4kKGq7tmhtNdc4Ts7pucu111b//1+9AUBukWU7vsRMPhdJ3lmAwGAArumeuehCvlUfu2cv81wo/Mfq/skyz4aKE1e6ZEcdvSwWABpreNmGXtiuqIuN2Vtr98Y0L4sVdQSoPcD2e2Ope/2i+5UoFLD25uyFY8MxlhHjTDJsI72UXcY6hhxhvYRd6+7GAKooCovvQyS+jF21NeJDI7FRCdC6W8b648/EopihEBy8XZxhag+Vzc+wK6JJclmJCl3GJCTZHTtjk5h+GIuWPRchueyApGDd56irUrjU/TAWSNZVFIXfmmCVDWDU8Zu1cfSjPqzW3c7G3ZuKjpmlhnXdr8g6fMj/zeto4vdn+JCS/paVCtWsywBWqofrKop+xC7e9MZxbJ/HfMU33TKYlc6CEy2ph2kobvH5+UPl5jGspeM8Mo7jA/9LE6BOT63HqrvfJ8UNW+pczbtIz42NHYJcIozYnerAdHZpV94y9jBNXG4rIRH67QjYI1jsnljYnMOtCZuVzlL8V65nUqRxcbMDb3Vvn2XXXVc5Ces+CFNes9kpf1PouItGzOwoYnd3dH19H8w8ZFHYM++k4EE27HR2WoYkE/IIH7Z7Javfuuts3tIhST7Fh+QvU2qRTEvLWGlq96fqRt2xiFMeFJbQJ7aHsvm8rbv3T2L90dX1dGcr8Lukk72cwYGwi7/YS37RhuioGAuBuSa1K/sOu97+RVlLv9HIrt9xGfGgLWcBbHZqyz6dKeZohQ/3JQksXX+4n2X3sOh9V2d5PUkQ2QpNKMFiKA5FH/UVR07Cjt7DMs/C1P1xSCZHfFjD2Vk9vq2Ahat7u7BKI0qAsSoCf8UdWw+wclkTjbf7ASxclaEAdj0Cw496XWdAGunqlENxbwqr1MGfcMzDmu8QkKVriP5actA8jBWxAxkrbzNmphHxKhaceMn5PLPGFVqfY6I4seablB1fC4Dn6sScTTbt0K639CFTqL/lczTQD7AKNkx8iAJZFEYrC8tg3bBeJcjLy6W++NB+iRPzPFvQRCCREAeuagyHIueyMX16wwolEL45mCjCGDfQFEZ554HY+KPrruf5NUcXMqaXAB7MeDlvpYMYF067IwVjNH8TZuag7OgAi7q7oBjeE2WFz3lKegq6UEpkjyHNLtMDKFw6ERNej9DgA2bjaIoFExyt9bpvkYjBy1d25PCaicoy7V6iXB5C9VWaL63bZk1Rcj/z8cCHjRknr1L0p4+xCTxONw6X20vQpysJjqkb4dZQzaQYCVaahjvosYhuUFCr6l59WwYskYYGGzXTdZoaV9qV69GMXdnhxj6RE1vL1Nhd4EUjm1U76RWTexyWGA0v8EL6JTUFh7yu1GQmXSzwojcLGTEO8RvB4jA6CxtmvLzFxb4SRQeJvWPqiV5zWBRIX+Sy4sz4l9bAlbNF0YMtrRvCdmcZit9Y3ov5xByYhJ4AEBxGa7wJq2Ymd3ZklgdegEwUq4k9FidpLVic5odYUXTu6KLPXML18e2raHY2yy5WpzPjctNDFVnvz5DTSajiRFUSS/+pPlxPsboqHld//vGM81V2u4G3VtBO/86M44sjCtrMBBsXPnVxXxRyMZZ2ULHi7uKQN2gAwn0xm0o/R1JQvoByVzCmZWNKk2d5DxWw9vuzfrID9vSNtewC3eOoSDqs86T8lxUK8vKPOT79gtLIIMBAsOPrEJCzhRep2vz9+om7G2+qHSXdGAt3EycmLGFqJ2MF3CSyl+sI6C07YePUlbM0BEdQVMSZRLVYJVFox6LOjGYXA1I/miGVhux9ua7N87zwSNi2FVpnbxf76kI848b0NWi6AQvBYadISe2ramOKRQg6hHoPFWjKaMm8Q3tBt4mUE7VJ6pr0EzTl+WoK5FW8jmqK3IVQAHWUQ465ts2weVJSGEoCyobFdwCCkoaRAhaJEuoXNyY+VrTtwt9BfK789Xsojsd5lmVOpwJC7lLbbG/VLUWIA1d162iwKzFaaJG9YlLQWxXIxkLsOtBsuepjb7YqGMtstycux7s8CvN1pDdKKpr03H7TjCQWVSZoB0Xqi+kaTFlKxwCWlVhcpTxlk+wzXMwQCiU0zXndd9FK+7IP2IIzFE64Cr8YvnBT+9ZAXHFBB1RvtTmZQWqWpTi5QLjMitRvHYtdYu5UaewSrKuYb7e6kD3Ev2TJWKz5a2sCVKxNZD2SGdIx6C0zTstbJKHiq9n+m94SFHYTH0xoI9GOpYhI8xlXc3UPlXCav6frTBU9h2Eh2gLGIZcKECEU3Rz0wc7zWCDCW46PJU2nPLGKUR4m8HdzgR7kKyo2x0XTJVbNWrR1SDsDekr7qLCbOcgwB0nBWSIGZiuWFImOcd5UEUWaKglHCF7DK66K7jQ2GpMsfebfKK/TdZuryOaQn41X6docilTDJKTZlW8eegEvopyDfm+rYfhj+FXX6PCRALdGs5W18FKWSZlcmpm0JRrp0Cr5doLEWDF8IwRRjzT5VRw3njh6juI7uBKsZeyFMsvsVlqVNazu1Ywsc4AEU9E+3JpzxDOCppba9IbHfKzy3N5edVFfK1liFhIasQuzTvQq16TTycakK0VJy5K9wuroMh3BsUkxqKGrub3p3q9H6pymNQV8h+aUQyP2TkfJ+pAFXRlzi4MllGPt5SX3WEgjwKUrrPSSb5CVRkct+jYuQruzxDke96zx5xMsK0HIYWj9sLOi+lr6gOgi4umaJ2Twnth3qbvulzGVUnlE9QeOXhQVKbXW7Ti5EprsV5hkCa0FKuwHD9WySZozTtLSpKenp+pSwZPsbiTKQ0X0fYqyfCzOpAErCVisyY3nQx7VMU/ejVgAJl72cQLhy7fvUG6oE6XEtnH/5XsYrzXGfWXU1X0dlRvVEWfFiqDkPyzPtMIgmqDDZiONvUH9ygrPQEBxxEKDmwjUa85B7H8X/XfAosGJnqZBlLfdWBHAFRS4sY8/JmDJaian5DxxPOBLpOubLWSxRp0MTJl7dwf9jVSWcjRFtre6G3wtDwbRfdI61TCya+acYi3/pWMn2kLBbsdY9LmfoY2uPoH3fU3U3fK+p6o78kxoSMsjSvnuq/UnLaEor0RmxzTSUYdeHAre0FvddJ8Cy7FpcB+Xfn/htLlqGq3EXtmMdMDe1uM+JeLR1iHagZ3BMGNZ55iTLNsYO7oxsw9SI0xdwrchmUVvvOYbPgI29I3Y99eSCyiJBUpKyyJ7YrkdhunWu8Uj92rUjIXooTHOhYMGVn/kZ5bsvyzbTrGGjU5udv9ZrnTAqGjBMMV6C5rZOWvGPTC3HdSfoMQ6V5FJIhLYb5a1U8sskpOuvpYoo9YPOdKyH/uZUYGjJSgTK4yN6X9+ULfXq/DnfpdRohe70zmAfObW2QGcqQNVCNFRjXvzcMBE5DkLNIciuiNNCOt7A18n9n10j90Hm5IxktBU6sZYXBzbjN6Sr2lhtHvLxYb8mFLQ/YHb6IojD96ESS2UyLfShvkOfxl8+L6r27xV7I/0JnAxihrXNKZLcca+H8EQup4xGi4rYln2VnsBgjoNGngcGzwInbd/MxaRnnIFJubGOuZZoMZI44+zQalMzGH5RkNOuaW98aMR47ESGvNGln1gH3LTXE1YBHZVoZrv94mkBy4ig8k/4+XV8uyCt7jaac+rSCiA3PQlxjfnu0l+qVaNovOEosGwfVBB8jZc+1VG2uiRnLmbnCZheySzRjVzLRPZSRPbxzzJrZSsHfuzQh4DoOjGJX/+XI+7sJ2brEVQRtVaxzCwIj67WsZDI9XP2aVe1tO5jR+RIwyWckt1Yn3hUqqwV9RB18X6Wz5fWHPs4OlTNJ3psxORO5/u9eZENxyoUP8SJPH5mdzpZ6js/RUftqrwUSxnxscF0pJfTJ8OqD6LXRwYHw9nlXraxXXS7XpPrEmrsaPasZUs1hNgZbDriQPsSKZfk0MrM9xbzEGLAK7I754fi9GZVwL+wBDkuxmGTA+cwUid2g9n0PfmvTVPAPu5ipfnkSq+5E85BkXMKfI5HT27U6kXyRGfCMRfj83MQxxGegDIqWnDubE6DPcoJoKeT2RUdQ9sOL1E65vEB7djJofkZ4kPXFG7Ur5s7JkpknNE41C+XqF+FcYcjjYVKE4cozRxNz11OMDq4qU/xXOsg3gVyhGsXtdSlFH+0SIsMtZkDX2kiUkyHuIlNh0eNJuDg/JwDurawm23KIoLPSnxx5EKJWD8Tj9risLBOmTjInPHT+3N0dNeoSFZ2xyXXBKPZ3XcsvXrxJzIcCyKIh1syuAsxU20/m+XYUb5iF3SyODjcOIXfMsXRsazLH+c27iNX1A4rg99urJqUpvrmNolTdU9ff7F5QBYul8zOaPR8yaG2mxcWBu+bBLf3VXNNzZpscjmOQeoTB6+99xcsFSUA2wLLV0LktmeTNa2l0NsUjbfnDz6lJZ54IGrYBdHYl7IxrXbk/lkvUKILApYWLBJapNxXMEuou+0S2JD90uWMS12rZ2b7fz+QqYtRkg2foBOHj5fbgTM9YY500JT5/PjYHI4J3+R0GH+PoWlPQKHohPbuNVy2ckB1itmD480P5HIRV1e0zOf3yANcMkTxwTRnogfR0Ae55X8lm/NBp/ddY8/umQefPZPSRasnq5MnvPA0M2Pr42kvntkpx59HiDShl7geM/bLX89umEIiq1CPfUcjHmk3slRroxANeyPgm1kdGmSp6Eeec7BVwgnAWZa5bj81QHS1kN1T0M9+kyFDFVwoZx9mfmHbyA2Xsma55pSPEtsaFx//9lzX5AyuLzYhCITZhAnXJhPAjnhzeV3OPBpLD0JMNzZbAvvx9ESJFd33Q8/9+VHGhwepAlXuNGRgdUETOg7oZ58Tk/AZIbFssblRVH4klJstPz+1OcqqaJeWWnGOZ9196XSj2GNn/pAQ10OPvSHIT/Xrs+K99p3cLJKfaju4jlPLz/jGU6i37mKctBveLB1hX73WQ9Kfz8W6QgAoaGiTYTvoVT6OVgfWZBCdG9OWmFcCBEbv4xdnz3vD2srKRb/fCw/G2KhNixJsJjWP92HscjDfLIKrVv0s7Eac3y9BFb87Zd3787fvftFVpL8gl/xwnlML5FfR+nkRfIreubrR9b/AWL5fCRiwE0/AAAAAElFTkSuQmCC" alt="" width="107" height="120" aria-hidden="true">
+          <img class="brand__mark" src="images/logo.png" alt="" width="107" height="120" aria-hidden="true">
           <span>
             <span class="brand__name">Geenie Estate Services</span>
             <span class="brand__sub">Senior Move Management</span>
@@ -1022,78 +1037,5 @@ a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
 })();
 </script>
 
-<script>
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape' && window.parent !== window) {
-    window.parent.postMessage({ type: 'close-fullscreen' }, '*');
-  }
-});
-</script>
-<!-- broken-img-handler -->
-<script>
-(function(){
-  if(window.__brokenImgHandler)return;
-  window.__brokenImgHandler=true;
-  var MAX=5,DELAYS=[2000,4000,8000,16000,32000];
-  var TOKEN=/^__(?:IMG|EMBED)_[a-zA-Z0-9_-]+__/;
-  var SENTINEL=new RegExp('^/api/published/[^/]+/(?:assets|embeds)/[^/?#]*-missing(?:[?#]|$)');
-  var NOISE=/^[\s\u2018\u2019\u201c\u201d]+|[\s\u2018\u2019\u201c\u201d]+$/g;
-  function canSrcEverResolve(src){
-    var bare=src.replace(NOISE,'');
-    return !TOKEN.test(bare)&&!SENTINEL.test(bare);
-  }
-  document.addEventListener('error',function(e){
-    var img=e.target;
-    if(!img||img.tagName!=='IMG')return;
-    var liveSrc=img.getAttribute('src');
-    var src=img.dataset.haOriginalSrc||liveSrc;
-    if(!src)return;
-    if(img.dataset.haOriginalSrc&&liveSrc&&liveSrc!==img.dataset.haOriginalSrc&&liveSrc.indexOf('_r=')<0){src=liveSrc;img.dataset.haOriginalSrc=src;img.dataset.haRetryCount='0'}
-    else if(!img.dataset.haOriginalSrc){img.dataset.haOriginalSrc=src}
-    var attempt=canSrcEverResolve(src)?parseInt(img.dataset.haRetryCount||'0',10):MAX;
-    if(img.dataset.haPhId){var old=document.getElementById(img.dataset.haPhId);if(old)old.remove()}
-    var ph=document.createElement('div');
-    ph.className='ha-img-placeholder'+(attempt>=MAX?' ha-failed':'');
-    ph.id='ha-ph-'+Math.random().toString(36).slice(2,9);
-    var w=img.getAttribute('width');var h=img.getAttribute('height');
-    if(w)ph.style.width=w+(isNaN(Number(w))?'':'px');
-    else if(img.style.width)ph.style.width=img.style.width;
-    else if(img.width>1)ph.style.width=img.width+'px';
-    if(h)ph.style.height=h+(isNaN(Number(h))?'':'px');
-    else if(img.style.height)ph.style.height=img.style.height;
-    else if(img.height>1)ph.style.height=img.height+'px';
-    ph.textContent=attempt>=MAX?'Image unavailable':'Loading image\u2026';
-    img.dataset.haPhId=ph.id;
-    if(img.dataset.haOrigDisplay==null)img.dataset.haOrigDisplay=img.style.display||'';
-    img.style.display='none';
-    img.insertAdjacentElement('afterend',ph);
-    if(attempt<MAX){
-      img.dataset.haRetryCount=String(attempt+1);
-      setTimeout(function(){
-        if(!img.isConnected)return;
-        if(img.dataset.haOriginalSrc!==src)return;
-        if(img.complete&&img.naturalWidth>0)return;
-        var curSrc=img.getAttribute('src');
-        if(curSrc&&curSrc.indexOf(src)!==0)return;
-        var fresh=src+(src.indexOf('?')>=0?'&':'?')+'_r='+(attempt+1)+'_'+Date.now();
-        img.src=fresh;
-      },DELAYS[attempt]);
-    }
-  },true);
-  document.addEventListener('load',function(e){
-    var img=e.target;
-    if(!img||img.tagName!=='IMG')return;
-    if(img.dataset.haPhId){
-      var ph=document.getElementById(img.dataset.haPhId);
-      if(ph)ph.remove();
-      delete img.dataset.haPhId;
-      img.style.display=img.dataset.haOrigDisplay||'';
-      delete img.dataset.haOrigDisplay;
-      delete img.dataset.haOriginalSrc;
-      delete img.dataset.haRetryCount;
-    }
-  },true);
-})();
-</script>
 </body>
 </html>
