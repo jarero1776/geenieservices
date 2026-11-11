@@ -9,28 +9,26 @@
   GEENIE ESTATE SERVICES — single-page site
   ===================================================================
 
-  FILES — keep this structure intact when uploading to a host:
+  FILES — all eight sit together in one folder, no subfolders:
 
     index.html              <- this file, must stay named index.html
-    images/
-      logo.png              <- header + footer mark
-      favicon.png           <- browser tab icon
-      hero-sorting-keepsakes.jpg
-      summer-portrait.jpg
-      gallery-packing.jpg
-      gallery-settled-in.jpg
-      gallery-estate-sale.jpg
+    logo.png                <- header + footer mark
+    favicon.png             <- browser tab icon
+    hero-sorting-keepsakes.jpg
+    summer-portrait.jpg
+    gallery-packing.jpg
+    gallery-settled-in.jpg
+    gallery-estate-sale.jpg
 
-  Upload the index.html file AND the images folder together, keeping the
-  folder alongside the file. Image paths are relative (images/name.jpg),
+  Upload all eight to the same place. Image paths are plain filenames,
   so they work on any host and also when opened straight off a hard drive.
-  To swap a photo, drop the new file in images/ using the SAME filename —
-  no HTML editing needed. If the new photo has different proportions,
-  update that <img> tag's width and height attributes to match.
+  To swap a photo, replace the file using the SAME filename — no HTML
+  editing needed. If the new photo has different proportions, update that
+  <img> tag's width and height attributes to match.
 
   BRAND
     Name   : Geenie Estate Services (a play on owner Summer Gee's surname)
-    Logo   : navy + gold genie-with-lamp mark, images/logo.png
+    Logo   : navy + gold genie-with-lamp mark, logo.png
              (transparent background, so it sits on any color)
     Navy   : #0B2559  — brand primary, carries all small text
     Gold   : #D8B154  — DECORATION ONLY, see the note in :root
@@ -42,8 +40,8 @@
      Currently: (425) 555-0100   /   tel:+14255550100
   2. EMAIL — appears 3x: JSON-LD, Contact section, footer.
      Currently: hello@geenieestateservices.com
-  3. OWNER PORTRAIT — images/summer-portrait.jpg
-  4. GALLERY PHOTOS — the three images/gallery-*.jpg files.
+  3. OWNER PORTRAIT — summer-portrait.jpg
+  4. GALLERY PHOTOS — the three gallery-*.jpg files.
      Replace with real job photos (with client permission) as soon as
      they exist; real photos convert far better than any placeholder.
   5. LICENSING LINE — see the FAQ item marked "UPDATE WHEN FINALIZED".
@@ -52,7 +50,7 @@
      comment above the <form> tag for the two options to wire it up.
   7. DOMAIN — update og:url, og:image, canonical, and JSON-LD "url"
      once the real domain is live. og:image must be a full absolute
-     URL (https://yourdomain.com/images/...) — relative paths do not
+     URL (https://yourdomain.com/hero-sorting-keepsakes.jpg) — relative paths do not
      work for social media link previews.
 
   Deliberately NOT on this page: NASMM claims, insurance/bonding claims,
@@ -70,13 +68,13 @@
 <meta property="og:description" content="One trusted person to plan, sort, pack, and settle you into your new home — plus estate sale coordination across Snohomish County and greater Seattle.">
 <meta property="og:url" content="https://www.geenieestateservices.com/">
 <!-- og:image MUST be an absolute URL — update the domain when the site goes live -->
-<meta property="og:image" content="https://www.geenieestateservices.com/images/hero-sorting-keepsakes.jpg">
+<meta property="og:image" content="https://www.geenieestateservices.com/hero-sorting-keepsakes.jpg">
 <meta property="og:locale" content="en_US">
 <meta name="theme-color" content="#0B2559">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" type="image/png" href="images/favicon.png">
-<link rel="apple-touch-icon" href="images/favicon.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -499,7 +497,7 @@ a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href="#top">
-      <img class="brand__mark" src="images/logo.png" alt="" width="107" height="120" aria-hidden="true">
+      <img class="brand__mark" src="logo.png" alt="" width="107" height="120" aria-hidden="true">
       <span>
         <span class="brand__name">Geenie Estate Services</span>
         <span class="brand__sub">Senior Move Management</span>
@@ -544,7 +542,7 @@ a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
 
       <figure class="hero__figure">
         <!-- PLACEHOLDER IMAGE — swap for a real photo when available -->
-        <img src="images/hero-sorting-keepsakes.jpg"
+        <img src="hero-sorting-keepsakes.jpg"
              alt="An older woman and her adult daughter sitting at a dining table, looking through a box of framed family photographs together."
              width="1400" height="781" fetchpriority="high" decoding="async">
       </figure>
@@ -655,7 +653,7 @@ a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
     <div class="wrap why__grid">
       <figure class="why__figure">
         <!-- PLACEHOLDER IMAGE — swap for Summer's real photo -->
-        <img src="images/summer-portrait.jpg"
+        <img src="summer-portrait.jpg"
              alt="Portrait of Summer Gee, owner of Geenie Estate Services, standing in a bright home interior."
              width="800" height="993" loading="lazy" decoding="async">
         <figcaption><strong>Summer Gee</strong> — Owner, Geenie Estate Services</figcaption>
@@ -714,19 +712,19 @@ a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
       <!-- PLACEHOLDER IMAGES — replace all three with real job photos (with client permission) -->
       <div class="gallery">
         <figure>
-          <img src="images/gallery-packing.jpg"
+          <img src="gallery-packing.jpg"
                alt="Neatly stacked and hand-labeled moving boxes in a sunlit bedroom, with packing paper and wrapped china on a dresser."
                width="800" height="597" loading="lazy" decoding="async">
           <figcaption>Careful, labeled packing — so unpacking is calm too.</figcaption>
         </figure>
         <figure>
-          <img src="images/gallery-settled-in.jpg"
+          <img src="gallery-settled-in.jpg"
                alt="A small apartment fully settled after a move, with the bed made, family photos hung, and a reading chair by the window."
                width="800" height="597" loading="lazy" decoding="async">
           <figcaption>Move-in day ends with a made bed, not a maze of boxes.</figcaption>
         </figure>
         <figure>
-          <img src="images/gallery-estate-sale.jpg"
+          <img src="gallery-estate-sale.jpg"
                alt="An organized estate sale set up in a living room, with glassware, china, and books arranged by category on draped tables."
                width="800" height="597" loading="lazy" decoding="async">
           <figcaption>Estate sales staged to sell — organized, priced, and hosted.</figcaption>
@@ -940,7 +938,7 @@ a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
     <div class="footer-grid">
       <div>
         <a class="brand" href="#top">
-          <img class="brand__mark" src="images/logo.png" alt="" width="107" height="120" aria-hidden="true">
+          <img class="brand__mark" src="logo.png" alt="" width="107" height="120" aria-hidden="true">
           <span>
             <span class="brand__name">Geenie Estate Services</span>
             <span class="brand__sub">Senior Move Management</span>
