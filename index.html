@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--
+  ===================================================================
+  GEENIE ESTATE SERVICES — single-page site
+  ===================================================================
+
+  BRAND
+    Name   : Geenie Estate Services (a play on owner Summer Gee's surname)
+    Logo   : navy + gold genie-with-lamp mark, embedded in this file as a
+             base64 data URI (header, footer, favicon). To replace it, swap
+             the data:image/png;base64,... strings, or upload the new file
+             and point src= at its URL instead.
+    Navy   : #0B2559  — brand primary, carries all small text
+    Gold   : #D8B154  — DECORATION ONLY, see the note in :root
+    Canvas : #FBFAF7  — warm off-white
+
+  BEFORE LAUNCH, SWAP THESE PLACEHOLDERS (search for "PLACEHOLDER"):
+
+  1. PHONE — appears 4x: JSON-LD, header CTA area, Contact section, footer.
+     Currently: (425) 555-0100   /   tel:+14255550100
+  2. EMAIL — appears 3x: JSON-LD, Contact section, footer.
+     Currently: hello@geenieestateservices.com
+  3. OWNER PORTRAIT — the <img> in the "Why Geenie" section.
+  4. GALLERY PHOTOS — the three <img> tags in the "Our Work" section.
+     Replace with real job photos (with client permission) as soon as
+     they exist; real photos convert far better than any placeholder.
+  5. LICENSING LINE — see the FAQ item marked "UPDATE WHEN FINALIZED".
+     It is deliberately worded in general terms right now.
+  6. CONTACT FORM — the form does not send anywhere yet. See the
+     comment above the <form> tag for the two options to wire it up.
+  7. DOMAIN — update the og:url and JSON-LD "url" once the domain is live.
+
+  Deliberately NOT on this page: NASMM claims, insurance/bonding claims,
+  testimonials, client counts, pricing figures, years-of-experience count.
+  ===================================================================
+-->
+
+<title>Senior Move Management in Snohomish County | Geenie Estate Services</title>
+<meta name="description" content="Compassionate senior move management and estate sale services in Snohomish County, WA. We handle downsizing, packing, movers, unpacking, and estate sales in Everett, Edmonds, Lynnwood and the greater Seattle area. Free consultation.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.geenieestateservices.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Senior Move Management in Snohomish County | Geenie Estate Services">
+<meta property="og:description" content="One trusted person to plan, sort, pack, and settle you into your new home — plus estate sale coordination across Snohomish County and greater Seattle.">
+<meta property="og:url" content="https://www.geenieestateservices.com/">
+<meta property="og:image" content="https://hyperagent.com/api/files/usergenerated/threads/cmuhxawrd081m07adbbebcb5p/images/b3b879eb-09ca-4818-9c85-70bf6bd0b4a8.png">
+<meta property="og:locale" content="en_US">
+<meta name="theme-color" content="#0B2559">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..600,50&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "additionalType": "https://schema.org/MovingCompany",
+  "name": "Geenie Estate Services",
+  "description": "Senior move management and estate sale services for older adults and their families in Snohomish County and the greater Seattle area.",
+  "url": "https://www.geenieestateservices.com/",
+  "telephone": "+1-425-555-0100",
+  "email": "hello@geenieestateservices.com",
+  "founder": { "@type": "Person", "name": "Summer Gee" },
+  "priceRange": "Free consultation",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "WA",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Snohomish County, Washington" },
+    { "@type": "City", "name": "Everett" },
+    { "@type": "City", "name": "Edmonds" },
+    { "@type": "City", "name": "Lynnwood" },
+    { "@type": "City", "name": "Mill Creek" },
+    { "@type": "City", "name": "Mukilteo" },
+    { "@type": "City", "name": "Snohomish" },
+    { "@type": "City", "name": "Monroe" },
+    { "@type": "City", "name": "Marysville" },
+    { "@type": "City", "name": "Arlington" },
+    { "@type": "City", "name": "Bothell" },
+    { "@type": "City", "name": "Seattle" }
+  ],
+  "knowsAbout": ["Senior move management", "Downsizing", "Estate sales", "Estate cleanout", "Packing and unpacking"]
+}
+</script>
+
+<style>
+/* ============ TOKENS ============ */
+:root{
+  /* Palette sampled from the Geenie logo: navy #041C4A, gold #D8B154.
+     ACCESSIBILITY RULE: gold fails contrast on light backgrounds (~2:1), so it is
+     used ONLY for non-text decoration (rules, borders, star motifs, icon fills)
+     and for text sitting on navy (~7:1, passes AA). Navy carries all small text. */
+  --paper:#FBFAF7;        /* warm off-white — keeps navy from reading cold */
+  --paper-2:#F4F2EC;
+  --paper-3:#E9E5DB;
+  --line:#E2DED4;
+  --ink:#17203A;          /* navy-black body text — 13.9:1 on --paper */
+  --ink-2:#55617A;        /* muted — 5.4:1 on --paper */
+  --accent:#0B2559;       /* brand navy — 13.3:1 on --paper */
+  --accent-deep:#04163A;
+  --accent-tint:#EDF0F7;
+  --accent-soft:#93A3C2;
+  --gold:#D8B154;         /* decoration + text on navy only */
+  --gold-soft:#E8D49B;
+  --gold-tint:#F8F1DE;
+  --radius:14px;
+  --radius-lg:22px;
+  --shadow:0 1px 2px rgba(33,41,48,.04), 0 8px 24px -12px rgba(33,41,48,.14);
+  --shadow-lift:0 2px 4px rgba(33,41,48,.05), 0 18px 40px -18px rgba(33,41,48,.22);
+  --gutter:clamp(1.25rem, 5vw, 4rem);
+  --maxw:1180px;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
+/* ============ RESET ============ */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:clamp(1rem,.96rem + .2vw,1.0625rem);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.14;letter-spacing:-.01em;margin:0;text-wrap:balance}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* ============ LAYOUT HELPERS ============ */
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
+.section{padding-block:clamp(3.75rem,9vw,7rem)}
+.section--tint{background:var(--paper-2)}
+.section--rule{border-top:1px solid var(--line)}
+.eyebrow{
+  font-family:var(--sans);font-size:.78rem;font-weight:600;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--accent);
+  margin:0 0 1rem;display:flex;align-items:center;gap:.7rem;
+}
+.eyebrow::before{
+  content:"";width:1.75rem;height:2px;flex:none;
+  background:var(--gold);border-radius:2px;
+}
+.h2{font-size:clamp(1.85rem,1.3rem + 2.3vw,2.85rem)}
+.h3{font-size:clamp(1.12rem,1.02rem + .4vw,1.3rem)}
+.lede{font-size:clamp(1.06rem,1rem + .35vw,1.2rem);color:var(--ink-2);max-width:62ch}
+.stack > * + *{margin-top:1.1rem}
+.measure{max-width:65ch}
+
+.skip{
+  position:absolute;left:1rem;top:-4rem;z-index:200;
+  background:var(--accent);color:#fff;padding:.7rem 1.1rem;
+  border-radius:0 0 10px 10px;font-weight:600;text-decoration:none;
+  transition:top .18s ease;
+}
+.skip:focus{top:0}
+
+/* ============ BUTTONS ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  font-family:var(--sans);font-size:1rem;font-weight:600;line-height:1;
+  padding:.95rem 1.6rem;border-radius:999px;border:1.5px solid transparent;
+  text-decoration:none;cursor:pointer;
+  transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease;
+}
+.btn--primary{background:var(--accent);color:#fff;box-shadow:var(--shadow)}
+.btn--primary:hover{background:var(--accent-deep);transform:translateY(-1px);box-shadow:var(--shadow-lift)}
+.btn--ghost{background:transparent;color:var(--accent);border-color:#C3D0DB}
+.btn--ghost:hover{background:var(--accent-tint);border-color:var(--accent-soft)}
+.btn--lg{padding:1.05rem 1.9rem;font-size:1.05rem}
+.btn--block{width:100%}
+
+/* ============ HEADER ============ */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(250,250,251,.88);
+  backdrop-filter:saturate(140%) blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  max-width:var(--maxw);margin-inline:auto;padding:.85rem var(--gutter);
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+}
+.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--ink)}
+.brand__mark{width:auto;height:52px;flex:none;display:block}
+@media (max-width:30rem){.brand__mark{height:44px}}
+.brand__name{font-family:var(--serif);font-size:1.12rem;font-weight:500;letter-spacing:-.01em;line-height:1.1;white-space:nowrap}
+.brand__sub{display:block;font-family:var(--sans);font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-top:.15rem}
+
+.nav-toggle{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:transparent;border:1.5px solid var(--line);border-radius:10px;
+  padding:.55rem .8rem;font:inherit;font-size:.9rem;font-weight:600;color:var(--ink);cursor:pointer;
+}
+.nav-toggle__bars{display:grid;gap:3.5px;width:16px}
+.nav-toggle__bars span{display:block;height:2px;background:var(--ink);border-radius:2px}
+
+.nav{display:none}
+.nav__list{display:flex;align-items:center;gap:.15rem}
+.nav__link{
+  display:block;padding:.5rem .6rem;border-radius:8px;
+  font-size:.92rem;font-weight:500;color:var(--ink-2);text-decoration:none;
+  white-space:nowrap;
+  transition:color .15s ease,background-color .15s ease;
+}
+.nav__link:hover{color:var(--accent);background:var(--accent-tint)}
+.nav__cta{margin-left:.6rem}
+.nav__cta .btn{white-space:nowrap;padding:.8rem 1.25rem;font-size:.94rem}
+
+@media (min-width:68rem){
+  .nav-toggle{display:none}
+  .nav{display:block}
+}
+/* mobile drawer */
+@media (max-width:67.999rem){
+  .nav[data-open="true"]{
+    display:block;position:absolute;left:0;right:0;top:100%;
+    background:var(--paper);border-bottom:1px solid var(--line);
+    box-shadow:var(--shadow-lift);
+    padding:.75rem var(--gutter) 1.35rem;
+  }
+  .nav[data-open="true"] .nav__list{flex-direction:column;align-items:stretch;gap:.1rem}
+  .nav[data-open="true"] .nav__link{padding:.8rem .25rem;font-size:1.02rem;border-bottom:1px solid var(--paper-3)}
+  .nav[data-open="true"] .nav__cta{margin:.9rem 0 0}
+  .nav[data-open="true"] .btn{width:100%}
+}
+
+/* ============ HERO ============ */
+.hero{padding-block:clamp(2.5rem,6vw,5rem) clamp(3rem,7vw,5.5rem);overflow:hidden}
+.hero__grid{display:grid;gap:clamp(2rem,5vw,3.5rem);align-items:center}
+.hero h1{font-size:clamp(2.2rem,1.4rem + 3.9vw,3.85rem);letter-spacing:-.022em}
+.hero h1 em{font-style:italic;color:var(--accent);font-weight:400}
+.hero__sub{margin-top:1.25rem;font-size:clamp(1.08rem,1rem + .45vw,1.28rem);color:var(--ink-2);max-width:34ch}
+.hero__actions{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.8rem}
+.hero__note{margin-top:1.4rem;font-size:.92rem;color:var(--ink-2);display:flex;align-items:center;gap:.55rem}
+.hero__note::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent-soft);flex:none}
+.hero__figure{position:relative;margin:0}
+.hero__figure img{
+  border-radius:var(--radius-lg);
+  aspect-ratio:4/3;object-fit:cover;
+  box-shadow:var(--shadow-lift);
+  background:var(--paper-3);
+}
+@media (min-width:56rem){
+  .hero__grid{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr)}
+  .hero__figure img{aspect-ratio:5/4}
+}
+
+/* ============ WHAT WE DO ============ */
+.about__grid{display:grid;gap:clamp(1.75rem,4vw,3.5rem)}
+@media (min-width:56rem){
+  .about__grid{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);align-items:start}
+  .about__head{position:sticky;top:6.5rem}
+}
+.flow-list{margin-top:1.9rem;display:grid;gap:0}
+.flow-list li{
+  display:flex;gap:1rem;align-items:flex-start;
+  padding:1rem 0;border-top:1px solid var(--line);
+}
+.flow-list li:last-child{border-bottom:1px solid var(--line)}
+.flow-list__num{
+  font-family:var(--serif);font-size:.95rem;color:var(--accent);
+  flex:none;width:1.6rem;padding-top:.15rem;
+}
+.flow-list strong{display:block;font-weight:600;font-size:1rem}
+.flow-list span{color:var(--ink-2);font-size:.97rem}
+
+/* ============ SERVICES ============ */
+.cards{margin-top:clamp(2rem,4vw,3rem);display:grid;gap:1.1rem}
+@media (min-width:38rem){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:64rem){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.card{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  padding:clamp(1.4rem,3vw,1.85rem);
+  transition:border-color .18s ease,box-shadow .18s ease,transform .18s ease;
+}
+.section--tint .card{background:#fff}
+.card:hover{border-color:var(--accent-soft);box-shadow:var(--shadow);transform:translateY(-2px)}
+.card__icon{
+  width:2.7rem;height:2.7rem;border-radius:11px;
+  background:var(--accent);color:var(--gold);
+  display:grid;place-items:center;margin-bottom:1.1rem;
+}
+.card__icon svg{width:1.3rem;height:1.3rem;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.card h3{margin-bottom:.5rem}
+.card p{color:var(--ink-2);font-size:.97rem}
+
+/* ============ WHY ============ */
+.why__grid{display:grid;gap:clamp(2rem,5vw,3.5rem);align-items:center}
+@media (min-width:56rem){.why__grid{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}}
+.why__figure{margin:0}
+.why__figure img{
+  border-radius:var(--radius-lg);aspect-ratio:4/5;object-fit:cover;
+  box-shadow:var(--shadow-lift);background:var(--paper-3);
+}
+.why__figure figcaption{margin-top:.85rem;font-size:.9rem;color:var(--ink-2)}
+.why__figure figcaption strong{color:var(--ink);font-weight:600}
+.pillars{margin-top:2rem;display:grid;gap:1.35rem}
+.pillar{display:flex;gap:.95rem;align-items:flex-start}
+.pillar__tick{
+  flex:none;width:1.6rem;height:1.6rem;border-radius:50%;
+  background:var(--accent);color:var(--gold);display:grid;place-items:center;margin-top:.15rem;
+}
+.pillar__tick svg{width:.85rem;height:.85rem;stroke:currentColor;fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.pillar strong{display:block;font-weight:600}
+.pillar p{color:var(--ink-2);font-size:.97rem;margin-top:.15rem}
+
+/* ============ GALLERY ============ */
+.gallery{margin-top:clamp(1.75rem,4vw,2.5rem);display:grid;gap:1.1rem}
+@media (min-width:44rem){.gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.gallery figure{margin:0}
+.gallery img{
+  border-radius:var(--radius);aspect-ratio:4/3;object-fit:cover;
+  box-shadow:var(--shadow);background:var(--paper-3);
+}
+.gallery figcaption{margin-top:.7rem;font-size:.9rem;color:var(--ink-2)}
+
+/* ============ STEPS ============ */
+.steps{margin-top:clamp(2rem,4vw,3rem);display:grid;gap:1.6rem;counter-reset:step}
+@media (min-width:44rem){.steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem 2.5rem}}
+@media (min-width:68rem){.steps{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.step{counter-increment:step;position:relative;padding-top:1.35rem;border-top:2px solid var(--gold)}
+.step::before{
+  content:counter(step,decimal-leading-zero);
+  font-family:var(--serif);font-size:.9rem;font-weight:600;color:var(--accent);
+  display:block;margin-bottom:.6rem;letter-spacing:.04em;
+}
+.step h3{margin-bottom:.45rem}
+.step p{color:var(--ink-2);font-size:.97rem}
+
+/* ============ AREA ============ */
+.area__grid{display:grid;gap:clamp(1.75rem,4vw,3rem)}
+@media (min-width:56rem){.area__grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center}}
+.area__panel{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);
+  padding:clamp(1.5rem,3.5vw,2.25rem);box-shadow:var(--shadow);
+}
+.area__panel h3{margin-bottom:1.1rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chips li{
+  background:var(--accent-tint);color:var(--accent-deep);
+  border-radius:999px;padding:.4rem .85rem;font-size:.9rem;font-weight:500;
+}
+.area__note{
+  margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid var(--line);
+  font-size:.97rem;color:var(--ink-2);
+}
+
+/* ============ FAQ ============ */
+.faq{margin-top:clamp(1.75rem,4vw,2.5rem);max-width:56rem;display:grid;gap:.7rem}
+.faq details{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  transition:border-color .18s ease,box-shadow .18s ease;
+}
+.section--tint .faq details{background:#fff}
+.faq details[open]{border-color:var(--accent-soft);box-shadow:var(--shadow)}
+.faq summary{
+  display:flex;align-items:flex-start;justify-content:space-between;gap:1.25rem;
+  padding:1.15rem clamp(1.1rem,2.5vw,1.5rem);cursor:pointer;
+  font-family:var(--serif);font-size:clamp(1.03rem,1rem + .25vw,1.16rem);font-weight:500;
+  list-style:none;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"";flex:none;width:.7rem;height:.7rem;margin-top:.42rem;
+  border-right:2px solid var(--accent);border-bottom:2px solid var(--accent);
+  transform:rotate(45deg);transition:transform .2s ease;
+}
+.faq details[open] summary::after{transform:rotate(225deg)}
+.faq summary:hover{color:var(--accent-deep)}
+.faq__body{padding:0 clamp(1.1rem,2.5vw,1.5rem) 1.35rem;color:var(--ink-2)}
+.faq__body > * + *{margin-top:.8rem}
+
+/* ============ CONTACT ============ */
+.contact__grid{display:grid;gap:clamp(2rem,4vw,3.25rem)}
+@media (min-width:58rem){.contact__grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:start}}
+.contact-lines{margin-top:1.9rem;display:grid;gap:.4rem}
+.contact-line{
+  display:flex;align-items:center;gap:.9rem;
+  padding:.95rem 0;border-bottom:1px solid var(--line);
+}
+.contact-line:first-child{border-top:1px solid var(--line)}
+.contact-line__icon{
+  flex:none;width:2.2rem;height:2.2rem;border-radius:9px;
+  background:var(--accent-tint);color:var(--accent);display:grid;place-items:center;
+}
+.contact-line__icon svg{width:1.1rem;height:1.1rem;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.contact-line__label{font-size:.78rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2)}
+.contact-line a,.contact-line span.val{display:block;font-size:1.06rem;font-weight:500;color:var(--ink);text-decoration:none}
+.contact-line a:hover{color:var(--accent);text-decoration:underline}
+
+.free-banner{
+  margin-top:1.9rem;background:var(--gold-tint);
+  border:1px solid #EBDCB4;border-left:4px solid var(--gold);
+  border-radius:var(--radius);padding:1.15rem 1.35rem;
+  font-size:.99rem;color:#4A3A15;
+}
+.free-banner strong{font-weight:600}
+
+.form-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);
+  padding:clamp(1.5rem,3.5vw,2.25rem);box-shadow:var(--shadow);
+}
+.form-card h3{margin-bottom:.4rem}
+.form-card__hint{color:var(--ink-2);font-size:.95rem;margin-bottom:1.6rem}
+.field + .field{margin-top:1.1rem}
+.field label{display:block;font-size:.9rem;font-weight:600;margin-bottom:.4rem}
+.field .req{color:var(--accent);font-weight:500}
+.field input,.field textarea{
+  width:100%;font:inherit;font-size:1rem;color:var(--ink);
+  background:var(--paper);border:1.5px solid var(--line);border-radius:10px;
+  padding:.78rem .9rem;transition:border-color .16s ease,box-shadow .16s ease;
+}
+.field textarea{min-height:7.5rem;resize:vertical}
+.field input:hover,.field textarea:hover{border-color:#C3D0DB}
+.field input:focus,.field textarea:focus{
+  outline:none;border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(62,92,119,.16);
+}
+.field input::placeholder,.field textarea::placeholder{color:#98A3AD}
+.form-card .btn{margin-top:1.6rem}
+.form-foot{margin-top:1rem;font-size:.87rem;color:var(--ink-2)}
+.form-status{
+  margin-top:1.1rem;padding:.9rem 1.1rem;border-radius:10px;
+  background:var(--accent-tint);border:1px solid #D4E0EA;
+  color:var(--accent-deep);font-size:.94rem;
+}
+.form-status[hidden]{display:none}
+
+/* ============ FOOTER ============ */
+.site-footer{background:var(--accent-deep);color:#C8D2DA;padding-block:clamp(2.75rem,6vw,4rem)}
+.footer-grid{display:grid;gap:2rem}
+@media (min-width:52rem){.footer-grid{grid-template-columns:1.4fr 1fr 1fr;gap:3rem}}
+.site-footer .brand{color:#fff}
+.site-footer .brand__mark{
+  height:52px;
+  background:var(--paper);border-radius:14px;padding:5px 7px;
+}
+.site-footer .brand__sub{color:var(--gold-soft)}
+.footer-blurb{margin-top:1.1rem;font-size:.95rem;color:#B4BFD4;max-width:38ch}
+.footer-h{font-size:.78rem;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem;font-family:var(--sans)}
+.footer-list{display:grid;gap:.5rem;font-size:.96rem}
+.footer-list a{color:#DFE5F1;text-decoration:none}
+.footer-list a:hover{color:#fff;text-decoration:underline}
+.footer-base{
+  margin-top:2.75rem;padding-top:1.5rem;border-top:1px solid #2A3B66;
+  display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;justify-content:space-between;
+  font-size:.88rem;color:#97A4BF;
+}
+</style>
+<style>
+.ha-img-placeholder{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;background:#f4f4f5;border:1px dashed #d4d4d8;border-radius:8px;color:#71717a;font-size:12px;font-family:system-ui,sans-serif;min-height:80px;padding:16px;box-sizing:border-box;animation:ha-img-pulse 1.5s ease-in-out infinite}
+.ha-img-placeholder.ha-failed{animation:none;opacity:.7}
+@keyframes ha-img-pulse{0%,100%{opacity:1}50%{opacity:.5}}
+@media(prefers-color-scheme:dark){.ha-img-placeholder{background:#27272a;border-color:#3f3f46;color:#a1a1aa}}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#top">
+      <img class="brand__mark" src="data:image/png;base64,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" alt="" width="107" height="120" aria-hidden="true">
+      <span>
+        <span class="brand__name">Geenie Estate Services</span>
+        <span class="brand__sub">Senior Move Management</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      Menu
+    </button>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#what-we-do">What We Do</a></li>
+        <li><a class="nav__link" href="#services">Services</a></li>
+        <li><a class="nav__link" href="#why">Why Geenie</a></li>
+        <li><a class="nav__link" href="#how-it-works">How It Works</a></li>
+        <li><a class="nav__link" href="#service-area">Service Area</a></li>
+        <li><a class="nav__link" href="#faq">FAQ</a></li>
+        <li class="nav__cta"><a class="btn btn--primary" href="#contact">Free consultation</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <span id="top"></span>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero wrap">
+    <div class="hero__grid">
+      <div>
+        <p class="eyebrow">Senior Move Management &amp; Estate Sales</p>
+        <h1>Leaving a longtime home, <em>without the overwhelm.</em></h1>
+        <p class="hero__sub">One trusted person to help you sort, pack, move, and settle in — so you and your family can focus on each other instead of the boxes.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="#contact">Schedule a free consultation</a>
+          <a class="btn btn--ghost btn--lg" href="#what-we-do">See how it works</a>
+        </div>
+        <p class="hero__note">Serving the greater Seattle area</p>
+      </div>
+
+      <figure class="hero__figure">
+        <!-- PLACEHOLDER IMAGE — swap for a real photo when available -->
+        <img src="https://hyperagent.com/api/files/usergenerated/threads/cmuhxawrd081m07adbbebcb5p/images/b3b879eb-09ca-4818-9c85-70bf6bd0b4a8.png"
+             alt="An older woman and her adult daughter sitting at a dining table, looking through a box of framed family photographs together."
+             width="1344" height="768" fetchpriority="high" decoding="async">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ========== WHAT WE DO ========== -->
+  <section class="section section--tint" id="what-we-do">
+    <div class="wrap about__grid">
+      <div class="about__head">
+        <p class="eyebrow">What We Do</p>
+        <h2 class="h2">Senior move management, in plain English.</h2>
+      </div>
+
+      <div>
+        <div class="stack">
+          <p class="lede">Most people have not moved in thirty or forty years. A lifetime of belongings, a closing date, and a much smaller floor plan add up to a project no one should have to manage alone — especially not in the middle of a health change or a family decision that was hard to make in the first place.</p>
+          <p class="lede">That is the whole job. We start with what stays and what goes, handle the packing, line up and supervise the movers, then unpack and set up the new place so it feels like home the first night — not three weeks later. If there is a house full of furniture left behind, we plan the estate sale and clear the rest so you can close on schedule.</p>
+        </div>
+
+        <ul class="flow-list">
+          <li>
+            <span class="flow-list__num" aria-hidden="true">01</span>
+            <span><strong>Sorting and downsizing</strong><span>Room by room, at a pace that leaves room for the stories — deciding what comes along, what goes to family, and what finds a new home.</span></span>
+          </li>
+          <li>
+            <span class="flow-list__num" aria-hidden="true">02</span>
+            <span><strong>Packing</strong><span>Careful, clearly labeled packing, with the things you will want on night one kept separate and easy to find.</span></span>
+          </li>
+          <li>
+            <span class="flow-list__num" aria-hidden="true">03</span>
+            <span><strong>Coordinating the movers</strong><span>We book licensed, insured movers, confirm the details, and stay on site to direct the day so you never have to manage a crew.</span></span>
+          </li>
+          <li>
+            <span class="flow-list__num" aria-hidden="true">04</span>
+            <span><strong>Unpacking and resettling</strong><span>Beds made, kitchen usable, pictures on the walls. You walk into a home, not a stack of cartons.</span></span>
+          </li>
+          <li>
+            <span class="flow-list__num" aria-hidden="true">05</span>
+            <span><strong>Estate sale planning</strong><span>What is left is sorted, priced, and sold — with donations and disposal arranged for everything that does not sell.</span></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <p class="eyebrow">Services</p>
+      <h2 class="h2">Take the whole project, or just the part you need.</h2>
+      <p class="lede" style="margin-top:1rem">Every move is put together differently. Some families hand over the entire transition; others just need the downsizing done before the listing photos. Both are welcome.</p>
+
+      <div class="cards">
+        <article class="card">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 3h6M8 7h8M4 11h16M5 11v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9"/><path d="M10 15h4"/></svg>
+          </span>
+          <h3 class="h3">Move planning &amp; consultation</h3>
+          <p>A walkthrough of the current home and the new floor plan, then a written plan and timeline covering what happens when — and who is handling it.</p>
+        </article>
+
+        <article class="card">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 7h18M6 7v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/><path d="M10 11v5M14 11v5"/></svg>
+          </span>
+          <h3 class="h3">Downsizing &amp; decluttering</h3>
+          <p>Hands-on, patient sorting in short sessions so decisions never pile up. We measure what actually fits and help decide the rest without pressure.</p>
+        </article>
+
+        <article class="card">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3.5 8.5 12 4l8.5 4.5v7L12 20l-8.5-4.5z"/><path d="M3.5 8.5 12 13l8.5-4.5M12 13v7"/></svg>
+          </span>
+          <h3 class="h3">Packing &amp; unpacking</h3>
+          <p>Fragile items wrapped properly, every box labeled by room and contents, and full unpacking on the other end — closets, kitchen, and all.</p>
+        </article>
+
+        <article class="card">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 9h16l-1.2 10a1 1 0 0 1-1 .9H6.2a1 1 0 0 1-1-.9z"/><path d="M8 9V6.5a4 4 0 0 1 8 0V9"/><path d="M12 13v3"/></svg>
+          </span>
+          <h3 class="h3">Estate sale coordination</h3>
+          <p>Staging, pricing, and running the sale so the remaining furniture, china, tools, and collectibles bring back real value instead of becoming a burden.</p>
+        </article>
+
+        <article class="card">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 20.5s-7-4.2-7-9.3A4.2 4.2 0 0 1 12 8.4a4.2 4.2 0 0 1 7 2.8c0 5.1-7 9.3-7 9.3z"/><path d="M12 8.4V3.5"/></svg>
+          </span>
+          <h3 class="h3">Donation &amp; disposal</h3>
+          <p>Whatever is not kept or sold goes somewhere sensible. We arrange donation pickups with receipts for your records, plus recycling and responsible haul-away.</p>
+        </article>
+
+        <article class="card">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7"/><path d="M6 10v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-9"/><path d="M9.5 20v-5h5v5"/></svg>
+          </span>
+          <h3 class="h3">Home cleanout before closing</h3>
+          <p>The house emptied, swept, and broom-clean for the buyer or the next tenant — coordinated around your closing date so nothing holds up the sale.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY GENIE ========== -->
+  <section class="section section--tint" id="why">
+    <div class="wrap why__grid">
+      <figure class="why__figure">
+        <!-- PLACEHOLDER IMAGE — swap for Summer's real photo -->
+        <img src="https://hyperagent.com/api/files/usergenerated/threads/cmuhxawrd081m07adbbebcb5p/images/d9546caa-5db3-45cf-9817-6e800eab0dea.png"
+             alt="Portrait of Summer Gee, owner of Geenie Estate Services, standing in a bright home interior."
+             width="896" height="1152" loading="lazy" decoding="async">
+        <figcaption><strong>Summer Gee</strong> — Owner, Geenie Estate Services</figcaption>
+      </figure>
+
+      <div>
+        <p class="eyebrow">Why Geenie</p>
+        <h2 class="h2">You get one person. She is the one who shows up.</h2>
+        <div class="stack" style="margin-top:1.25rem">
+          <p class="lede">Summer Gee has spent years doing this work hands-on — sitting at kitchen tables with families making hard decisions, packing china, directing movers, and running estate sales here in Snohomish County. She started Geenie Estate Services to do it the way she believes it should be done: personally.</p>
+          <p class="lede">She is local. She knows which senior communities have loading dock rules, which movers actually show up on time, where donations are welcome, and how long a closing around here really takes. That knowledge saves families weeks.</p>
+        </div>
+
+        <div class="pillars">
+          <div class="pillar">
+            <span class="pillar__tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+            <div>
+              <strong>One point of contact</strong>
+              <p>No call center, no rotating coordinators, no repeating your story. You have Summer's number, and Summer knows your move.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <span class="pillar__tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+            <div>
+              <strong>Hands-on, not just managing</strong>
+              <p>She is on site doing the work — sorting, wrapping, unpacking — not dropping off a crew and checking in by phone.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <span class="pillar__tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+            <div>
+              <strong>Patient with the hard parts</strong>
+              <p>The slow decisions and the sentimental boxes are the job, not an interruption to it. Nobody gets rushed through fifty years of a life.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <span class="pillar__tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+            <div>
+              <strong>Vetted local help when it is needed</strong>
+              <p>Movers, haul-away, and donation pickups are handled by trusted local partners she books and supervises — so the quality stays hers.</p>
+            </div>
+          </div>
+        </div>
+
+        <a class="btn btn--primary btn--lg" href="#contact" style="margin-top:2rem">Talk with Summer — free consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY ========== -->
+  <section class="section" id="our-work">
+    <div class="wrap">
+      <p class="eyebrow">Our Work</p>
+      <h2 class="h2">What a well-run move looks like.</h2>
+
+      <!-- PLACEHOLDER IMAGES — replace all three with real job photos (with client permission) -->
+      <div class="gallery">
+        <figure>
+          <img src="https://hyperagent.com/api/files/usergenerated/threads/cmuhxawrd081m07adbbebcb5p/images/7923474e-c01e-4bcc-8f94-62f4df956703.png"
+               alt="Neatly stacked and hand-labeled moving boxes in a sunlit bedroom, with packing paper and wrapped china on a dresser."
+               width="1184" height="864" loading="lazy" decoding="async">
+          <figcaption>Careful, labeled packing — so unpacking is calm too.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://hyperagent.com/api/files/usergenerated/threads/cmuhxawrd081m07adbbebcb5p/images/b96a6ea4-8280-41cc-a3f6-c11790b95508.png"
+               alt="A small apartment fully settled after a move, with the bed made, family photos hung, and a reading chair by the window."
+               width="1184" height="864" loading="lazy" decoding="async">
+          <figcaption>Move-in day ends with a made bed, not a maze of boxes.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://hyperagent.com/api/files/usergenerated/threads/cmuhxawrd081m07adbbebcb5p/images/2131580a-36fe-4837-9b3c-bf187479a4e6.png"
+               alt="An organized estate sale set up in a living room, with glassware, china, and books arranged by category on draped tables."
+               width="1184" height="864" loading="lazy" decoding="async">
+          <figcaption>Estate sales staged to sell — organized, priced, and hosted.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOW IT WORKS ========== -->
+  <section class="section section--tint" id="how-it-works">
+    <div class="wrap">
+      <p class="eyebrow">How It Works</p>
+      <h2 class="h2">From the first phone call to the first night in.</h2>
+
+      <div class="steps">
+        <article class="step">
+          <h3 class="h3">The free consultation</h3>
+          <p>We walk through the home together, talk about the timeline and what matters most to you, and look at the new floor plan. No pressure and no charge — most people leave this conversation relieved.</p>
+        </article>
+        <article class="step">
+          <h3 class="h3">Your written plan</h3>
+          <p>You get a clear plan and schedule: what gets sorted when, who is coming which day, how the movers and the estate sale fit around your closing date, and what it will cost.</p>
+        </article>
+        <article class="step">
+          <h3 class="h3">The work gets done</h3>
+          <p>Sorting, packing, and downsizing happen in manageable sessions. On move day Summer is on site early, directing the crew and handling the details so the family can simply be present.</p>
+        </article>
+        <article class="step">
+          <h3 class="h3">Settled in — and closed out</h3>
+          <p>The new home is unpacked and set up the same day where possible. Then the old house is emptied, cleared, and left broom-clean and ready for closing.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICE AREA ========== -->
+  <section class="section" id="service-area">
+    <div class="wrap area__grid">
+      <div>
+        <p class="eyebrow">Service Area</p>
+        <h2 class="h2">Where we work.</h2>
+        <div class="stack" style="margin-top:1.25rem">
+          <p class="lede">Geenie Estate Services works throughout Snohomish County and the greater Seattle area, including senior living communities, condos, and single-family homes.</p>
+          <p class="lede">Moving a parent out of the area, or coordinating from another state? That happens often, and it is very doable — get in touch and we will talk through how it would work.</p>
+        </div>
+      </div>
+
+      <div class="area__panel">
+        <h3 class="h3">Cities we regularly serve</h3>
+        <ul class="chips">
+          <li>Everett</li><li>Edmonds</li><li>Lynnwood</li><li>Mill Creek</li>
+          <li>Mukilteo</li><li>Snohomish</li><li>Monroe</li><li>Marysville</li>
+          <li>Arlington</li><li>Bothell</li><li>Mountlake Terrace</li><li>Stanwood</li>
+          <li>Lake Stevens</li><li>Brier</li><li>Greater Seattle</li>
+        </ul>
+        <p class="area__note">Somewhere not on the list? Ask. Other locations can often be arranged, and long-distance moves are coordinated with trusted move managers on the other end.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="section section--tint" id="faq">
+    <div class="wrap">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="h2">Questions families ask first.</h2>
+
+      <div class="faq">
+        <details open>
+          <summary>What exactly is senior move management?</summary>
+          <div class="faq__body">
+            <p>It is having one experienced person run the entire transition out of a longtime home. A moving company loads a truck and drives it. A senior move manager starts weeks earlier — planning, sorting, and downsizing — then coordinates the movers, and stays until the new home is unpacked and livable and the old one is cleared out.</p>
+            <p>The point is to take the planning, the lifting, and the decision fatigue off the family, especially when adult children live out of the area or are managing this alongside jobs of their own.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Are you licensed, bonded, and insured?</summary>
+          <div class="faq__body">
+            <!-- UPDATE WHEN FINALIZED: replace this paragraph with the specific
+                 license / bond / insurance details once they are in place. -->
+            <p>Geenie Estate Services operates as a registered Washington business, and we are happy to walk you through our current credentials and coverage during your consultation — just ask, and we will put it in writing.</p>
+            <p>Any movers or haul-away companies brought onto your job are licensed and insured in their own right. We are glad to share who we are using before they arrive.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How does pricing work?</summary>
+          <div class="faq__body">
+            <p>Every home is different, so we do not quote a number before seeing the situation. After the free walkthrough you will receive a written estimate covering the scope you actually want — whether that is the full move or just the downsizing.</p>
+            <p>You are never billed for the initial consultation, and you will always know the cost in writing before any work begins.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What happens to the items that are not kept?</summary>
+          <div class="faq__body">
+            <p>Nothing worth something gets thrown out. Items generally go one of four ways: home with family members, into an estate sale, to a donation partner, or — only as a last resort — to recycling and disposal.</p>
+            <p>Donations go to local organizations and we collect the receipts for your tax records. You approve the plan for anything of real or sentimental value before it leaves the house.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Do you provide the movers, or hire them?</summary>
+          <div class="faq__body">
+            <p>We hire and supervise them. Summer books licensed, insured local movers she trusts, confirms the arrangements, and is on site to direct the day — which means one person is accountable for how the move goes, not a handoff between vendors.</p>
+            <p>Donation pickups and junk haul-away work the same way: arranged and overseen by us, performed by vetted local partners.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How far ahead should we call?</summary>
+          <div class="faq__body">
+            <p>Sooner is better — six to eight weeks before a move gives everyone breathing room, and starting earlier means decisions get made calmly rather than under a deadline.</p>
+            <p>That said, short-notice and urgent moves happen all the time, often after a fall or a hospital stay. Call anyway; we will tell you honestly what is possible in the time available.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section" id="contact">
+    <div class="wrap contact__grid">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2 class="h2">Let's start with a conversation.</h2>
+        <p class="lede" style="margin-top:1rem">Tell us a little about the situation — where things stand, and roughly when the move needs to happen. Summer will follow up personally.</p>
+
+        <div class="contact-lines">
+          <div class="contact-line">
+            <span class="contact-line__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 4h3.5l1.8 4.4-2.2 1.3a11 11 0 0 0 5.2 5.2l1.3-2.2 4.4 1.8V18a2 2 0 0 1-2.1 2A15 15 0 0 1 3 6.1 2 2 0 0 1 5 4z"/></svg>
+            </span>
+            <span>
+              <span class="contact-line__label">Phone</span>
+              <!-- PLACEHOLDER PHONE -->
+              <a href="tel:+14255550100">(425) 555-0100</a>
+            </span>
+          </div>
+
+          <div class="contact-line">
+            <span class="contact-line__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5z"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+            </span>
+            <span>
+              <span class="contact-line__label">Email</span>
+              <!-- PLACEHOLDER EMAIL -->
+              <a href="mailto:hello@geenieestateservices.com">hello@geenieestateservices.com</a>
+            </span>
+          </div>
+
+          <div class="contact-line">
+            <span class="contact-line__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 21s-7-5.3-7-10.5A7 7 0 0 1 19 10.5C19 15.7 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.6"/></svg>
+            </span>
+            <span>
+              <span class="contact-line__label">Service area</span>
+              <span class="val">Greater Seattle area</span>
+            </span>
+          </div>
+        </div>
+
+        <p class="free-banner"><strong>The first consultation is always free.</strong> A walkthrough, an honest conversation about your options, and a written estimate — with no obligation to book anything.</p>
+      </div>
+
+      <!--
+        FORM IS NOT WIRED UP YET. Two easy options:
+
+        A) Form service (recommended — keeps the site static):
+           Sign up at Formspree, Basin, or Netlify Forms, then set:
+             <form action="https://formspree.io/f/YOUR_ID" method="POST">
+           and delete the <script> block that intercepts the submit.
+
+        B) Quick interim fix:
+           <form action="mailto:hello@geenieestateservices.com" method="POST" enctype="text/plain">
+           (works, but opens the visitor's email client — less reliable.)
+      -->
+      <div class="form-card">
+        <h3 class="h3">Request your free consultation</h3>
+        <p class="form-card__hint">We reply to every message, usually within one business day.</p>
+
+        <form id="consult-form" action="#" method="post" novalidate>
+          <div class="field">
+            <label for="cf-name">Name <span class="req" aria-hidden="true">*</span></label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" required placeholder="Your name">
+          </div>
+          <div class="field">
+            <label for="cf-phone">Phone <span class="req" aria-hidden="true">*</span></label>
+            <input id="cf-phone" name="phone" type="tel" autocomplete="tel" required placeholder="(425) 555-0123">
+          </div>
+          <div class="field">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label for="cf-message">How can we help?</label>
+            <textarea id="cf-message" name="message" placeholder="A sentence or two about the move — where things stand, and roughly when it needs to happen."></textarea>
+          </div>
+
+          <button class="btn btn--primary btn--lg btn--block" type="submit">Request free consultation</button>
+          <p class="form-status" id="form-status" role="status" hidden></p>
+          <p class="form-foot">Prefer to talk? Call <a href="tel:+14255550100">(425) 555-0100</a>. Fields marked * are required.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="#top">
+          <img class="brand__mark" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGsAAAB4CAMAAADCI/wLAAABWGlDQ1BJQ0MgUHJvZmlsZQAAeJx9kLFLw1AQxr9WpaB1EB0cHDKJQ5SSCro4tBVEcQhVweqUvqapkMZHkiIFN/+Bgv+BCs5uFoc6OjgIopPo5uSk4KLleS+JpCJ6j+N+fO+74zggOW5wbvcDqDu+W1zKK5ulLSX1jAS9IAzm8Zyur0r+rj/j/T703k7LWb///43Biukxqp+UGcZdH0ioxPqezyXvE4+5tBRxS7IV8onkcsjngWe9WCC+JlZYzagQvxCr5R7d6uG63WDRDnL7tOlsrMk5lBNYxA48cNgw0IQCHdk//LOBv4BdcjfhUp+FGnzqyZEiJ5jEy3DAMAOVWEOGUpN3ju53F91PjbWDJ2ChI4S4iLWVDnA2Rydrx9rUPDAyBFy1ueEagdRHmaxWgddTYLgEjN5Qz7ZXzWrh9uk8MPAoxNskkDoEui0hPo6E6B5T8wNw6XwBA6diE8HYWhMAAAD/UExURQwULvn6+hwrT5Gj1llaYdKxX3Jycpicp1heb1pql+DPoqSTa52bmOfm4zhEZamqrd3e3XB2h4yRnMq6klpMMnqQyHaGsg8PbYV3WkY5KLe7xnN4h1teamJirDtPg3yDk+zlzN/Den2Dkn9//7zDzDMzOP//ADc7TLa30jxDUf//sd3UtwAA/wBnZwD//7fF3jxEWH//////fzQ5TV+qqv9/f7vEzeG0tNvUvCAlPUA9QLfAzf9//8S6zQAAAAQaRwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP3hOIcAAABAdFJOU/0Q+P7t/gJfpv75/vz97hRUm5P9///+A/7+U21vBv6Xm/9vAlEEAXskfAOoAQIB/p8CAqMDAjsfXbz/nAIaAP60ByY/AAAPCUlEQVR42rVaB3sbuQ4kKGq7tmhtNdc4Ts7pucu111b//1+9AUBukWU7vsRMPhdJ3lmAwGAArumeuehCvlUfu2cv81wo/Mfq/skyz4aKE1e6ZEcdvSwWABpreNmGXtiuqIuN2Vtr98Y0L4sVdQSoPcD2e2Ope/2i+5UoFLD25uyFY8MxlhHjTDJsI72UXcY6hhxhvYRd6+7GAKooCovvQyS+jF21NeJDI7FRCdC6W8b648/EopihEBy8XZxhag+Vzc+wK6JJclmJCl3GJCTZHTtjk5h+GIuWPRchueyApGDd56irUrjU/TAWSNZVFIXfmmCVDWDU8Zu1cfSjPqzW3c7G3ZuKjpmlhnXdr8g6fMj/zeto4vdn+JCS/paVCtWsywBWqofrKop+xC7e9MZxbJ/HfMU33TKYlc6CEy2ph2kobvH5+UPl5jGspeM8Mo7jA/9LE6BOT63HqrvfJ8UNW+pczbtIz42NHYJcIozYnerAdHZpV94y9jBNXG4rIRH67QjYI1jsnljYnMOtCZuVzlL8V65nUqRxcbMDb3Vvn2XXXVc5Ces+CFNes9kpf1PouItGzOwoYnd3dH19H8w8ZFHYM++k4EE27HR2WoYkE/IIH7Z7Javfuuts3tIhST7Fh+QvU2qRTEvLWGlq96fqRt2xiFMeFJbQJ7aHsvm8rbv3T2L90dX1dGcr8Lukk72cwYGwi7/YS37RhuioGAuBuSa1K/sOu97+RVlLv9HIrt9xGfGgLWcBbHZqyz6dKeZohQ/3JQksXX+4n2X3sOh9V2d5PUkQ2QpNKMFiKA5FH/UVR07Cjt7DMs/C1P1xSCZHfFjD2Vk9vq2Ahat7u7BKI0qAsSoCf8UdWw+wclkTjbf7ASxclaEAdj0Cw496XWdAGunqlENxbwqr1MGfcMzDmu8QkKVriP5actA8jBWxAxkrbzNmphHxKhaceMn5PLPGFVqfY6I4seablB1fC4Dn6sScTTbt0K639CFTqL/lczTQD7AKNkx8iAJZFEYrC8tg3bBeJcjLy6W++NB+iRPzPFvQRCCREAeuagyHIueyMX16wwolEL45mCjCGDfQFEZ554HY+KPrruf5NUcXMqaXAB7MeDlvpYMYF067IwVjNH8TZuag7OgAi7q7oBjeE2WFz3lKegq6UEpkjyHNLtMDKFw6ERNej9DgA2bjaIoFExyt9bpvkYjBy1d25PCaicoy7V6iXB5C9VWaL63bZk1Rcj/z8cCHjRknr1L0p4+xCTxONw6X20vQpysJjqkb4dZQzaQYCVaahjvosYhuUFCr6l59WwYskYYGGzXTdZoaV9qV69GMXdnhxj6RE1vL1Nhd4EUjm1U76RWTexyWGA0v8EL6JTUFh7yu1GQmXSzwojcLGTEO8RvB4jA6CxtmvLzFxb4SRQeJvWPqiV5zWBRIX+Sy4sz4l9bAlbNF0YMtrRvCdmcZit9Y3ov5xByYhJ4AEBxGa7wJq2Ymd3ZklgdegEwUq4k9FidpLVic5odYUXTu6KLPXML18e2raHY2yy5WpzPjctNDFVnvz5DTSajiRFUSS/+pPlxPsboqHld//vGM81V2u4G3VtBO/86M44sjCtrMBBsXPnVxXxRyMZZ2ULHi7uKQN2gAwn0xm0o/R1JQvoByVzCmZWNKk2d5DxWw9vuzfrID9vSNtewC3eOoSDqs86T8lxUK8vKPOT79gtLIIMBAsOPrEJCzhRep2vz9+om7G2+qHSXdGAt3EycmLGFqJ2MF3CSyl+sI6C07YePUlbM0BEdQVMSZRLVYJVFox6LOjGYXA1I/miGVhux9ua7N87zwSNi2FVpnbxf76kI848b0NWi6AQvBYadISe2ramOKRQg6hHoPFWjKaMm8Q3tBt4mUE7VJ6pr0EzTl+WoK5FW8jmqK3IVQAHWUQ465ts2weVJSGEoCyobFdwCCkoaRAhaJEuoXNyY+VrTtwt9BfK789Xsojsd5lmVOpwJC7lLbbG/VLUWIA1d162iwKzFaaJG9YlLQWxXIxkLsOtBsuepjb7YqGMtstycux7s8CvN1pDdKKpr03H7TjCQWVSZoB0Xqi+kaTFlKxwCWlVhcpTxlk+wzXMwQCiU0zXndd9FK+7IP2IIzFE64Cr8YvnBT+9ZAXHFBB1RvtTmZQWqWpTi5QLjMitRvHYtdYu5UaewSrKuYb7e6kD3Ev2TJWKz5a2sCVKxNZD2SGdIx6C0zTstbJKHiq9n+m94SFHYTH0xoI9GOpYhI8xlXc3UPlXCav6frTBU9h2Eh2gLGIZcKECEU3Rz0wc7zWCDCW46PJU2nPLGKUR4m8HdzgR7kKyo2x0XTJVbNWrR1SDsDekr7qLCbOcgwB0nBWSIGZiuWFImOcd5UEUWaKglHCF7DK66K7jQ2GpMsfebfKK/TdZuryOaQn41X6docilTDJKTZlW8eegEvopyDfm+rYfhj+FXX6PCRALdGs5W18FKWSZlcmpm0JRrp0Cr5doLEWDF8IwRRjzT5VRw3njh6juI7uBKsZeyFMsvsVlqVNazu1Ywsc4AEU9E+3JpzxDOCppba9IbHfKzy3N5edVFfK1liFhIasQuzTvQq16TTycakK0VJy5K9wuroMh3BsUkxqKGrub3p3q9H6pymNQV8h+aUQyP2TkfJ+pAFXRlzi4MllGPt5SX3WEgjwKUrrPSSb5CVRkct+jYuQruzxDke96zx5xMsK0HIYWj9sLOi+lr6gOgi4umaJ2Twnth3qbvulzGVUnlE9QeOXhQVKbXW7Ti5EprsV5hkCa0FKuwHD9WySZozTtLSpKenp+pSwZPsbiTKQ0X0fYqyfCzOpAErCVisyY3nQx7VMU/ejVgAJl72cQLhy7fvUG6oE6XEtnH/5XsYrzXGfWXU1X0dlRvVEWfFiqDkPyzPtMIgmqDDZiONvUH9ygrPQEBxxEKDmwjUa85B7H8X/XfAosGJnqZBlLfdWBHAFRS4sY8/JmDJaian5DxxPOBLpOubLWSxRp0MTJl7dwf9jVSWcjRFtre6G3wtDwbRfdI61TCya+acYi3/pWMn2kLBbsdY9LmfoY2uPoH3fU3U3fK+p6o78kxoSMsjSvnuq/UnLaEor0RmxzTSUYdeHAre0FvddJ8Cy7FpcB+Xfn/htLlqGq3EXtmMdMDe1uM+JeLR1iHagZ3BMGNZ55iTLNsYO7oxsw9SI0xdwrchmUVvvOYbPgI29I3Y99eSCyiJBUpKyyJ7YrkdhunWu8Uj92rUjIXooTHOhYMGVn/kZ5bsvyzbTrGGjU5udv9ZrnTAqGjBMMV6C5rZOWvGPTC3HdSfoMQ6V5FJIhLYb5a1U8sskpOuvpYoo9YPOdKyH/uZUYGjJSgTK4yN6X9+ULfXq/DnfpdRohe70zmAfObW2QGcqQNVCNFRjXvzcMBE5DkLNIciuiNNCOt7A18n9n10j90Hm5IxktBU6sZYXBzbjN6Sr2lhtHvLxYb8mFLQ/YHb6IojD96ESS2UyLfShvkOfxl8+L6r27xV7I/0JnAxihrXNKZLcca+H8EQup4xGi4rYln2VnsBgjoNGngcGzwInbd/MxaRnnIFJubGOuZZoMZI44+zQalMzGH5RkNOuaW98aMR47ESGvNGln1gH3LTXE1YBHZVoZrv94mkBy4ig8k/4+XV8uyCt7jaac+rSCiA3PQlxjfnu0l+qVaNovOEosGwfVBB8jZc+1VG2uiRnLmbnCZheySzRjVzLRPZSRPbxzzJrZSsHfuzQh4DoOjGJX/+XI+7sJ2brEVQRtVaxzCwIj67WsZDI9XP2aVe1tO5jR+RIwyWckt1Yn3hUqqwV9RB18X6Wz5fWHPs4OlTNJ3psxORO5/u9eZENxyoUP8SJPH5mdzpZ6js/RUftqrwUSxnxscF0pJfTJ8OqD6LXRwYHw9nlXraxXXS7XpPrEmrsaPasZUs1hNgZbDriQPsSKZfk0MrM9xbzEGLAK7I754fi9GZVwL+wBDkuxmGTA+cwUid2g9n0PfmvTVPAPu5ipfnkSq+5E85BkXMKfI5HT27U6kXyRGfCMRfj83MQxxGegDIqWnDubE6DPcoJoKeT2RUdQ9sOL1E65vEB7djJofkZ4kPXFG7Ur5s7JkpknNE41C+XqF+FcYcjjYVKE4cozRxNz11OMDq4qU/xXOsg3gVyhGsXtdSlFH+0SIsMtZkDX2kiUkyHuIlNh0eNJuDg/JwDurawm23KIoLPSnxx5EKJWD8Tj9risLBOmTjInPHT+3N0dNeoSFZ2xyXXBKPZ3XcsvXrxJzIcCyKIh1syuAsxU20/m+XYUb5iF3SyODjcOIXfMsXRsazLH+c27iNX1A4rg99urJqUpvrmNolTdU9ff7F5QBYul8zOaPR8yaG2mxcWBu+bBLf3VXNNzZpscjmOQeoTB6+99xcsFSUA2wLLV0LktmeTNa2l0NsUjbfnDz6lJZ54IGrYBdHYl7IxrXbk/lkvUKILApYWLBJapNxXMEuou+0S2JD90uWMS12rZ2b7fz+QqYtRkg2foBOHj5fbgTM9YY500JT5/PjYHI4J3+R0GH+PoWlPQKHohPbuNVy2ckB1itmD480P5HIRV1e0zOf3yANcMkTxwTRnogfR0Ae55X8lm/NBp/ddY8/umQefPZPSRasnq5MnvPA0M2Pr42kvntkpx59HiDShl7geM/bLX89umEIiq1CPfUcjHmk3slRroxANeyPgm1kdGmSp6Eeec7BVwgnAWZa5bj81QHS1kN1T0M9+kyFDFVwoZx9mfmHbyA2Xsma55pSPEtsaFx//9lzX5AyuLzYhCITZhAnXJhPAjnhzeV3OPBpLD0JMNzZbAvvx9ESJFd33Q8/9+VHGhwepAlXuNGRgdUETOg7oZ58Tk/AZIbFssblRVH4klJstPz+1OcqqaJeWWnGOZ9196XSj2GNn/pAQ10OPvSHIT/Xrs+K99p3cLJKfaju4jlPLz/jGU6i37mKctBveLB1hX73WQ9Kfz8W6QgAoaGiTYTvoVT6OVgfWZBCdG9OWmFcCBEbv4xdnz3vD2srKRb/fCw/G2KhNixJsJjWP92HscjDfLIKrVv0s7Eac3y9BFb87Zd3787fvftFVpL8gl/xwnlML5FfR+nkRfIreubrR9b/AWL5fCRiwE0/AAAAAElFTkSuQmCC" alt="" width="107" height="120" aria-hidden="true">
+          <span>
+            <span class="brand__name">Geenie Estate Services</span>
+            <span class="brand__sub">Senior Move Management</span>
+          </span>
+        </a>
+        <p class="footer-blurb">Senior move management and estate sales for older adults and their families — planned, packed, and settled by one person who stays with you start to finish.</p>
+      </div>
+
+      <div>
+        <p class="footer-h">Explore</p>
+        <ul class="footer-list">
+          <li><a href="#what-we-do">What We Do</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why">Why Geenie</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer-h">Get in touch</p>
+        <ul class="footer-list">
+          <!-- PLACEHOLDER PHONE + EMAIL -->
+          <li><a href="tel:+14255550100">(425) 555-0100</a></li>
+          <li><a href="mailto:hello@geenieestateservices.com">hello@geenieestateservices.com</a></li>
+          <li><a href="#contact">Free consultation</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-base">
+      <span>&copy; 2026 Geenie Estate Services.</span>
+      <span>Serving the greater Seattle area</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---- mobile nav ---- */
+  var toggle = document.querySelector(".nav-toggle");
+  var nav = document.getElementById("primary-nav");
+
+  function setNav(open) {
+    nav.setAttribute("data-open", open ? "true" : "false");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
+  toggle.addEventListener("click", function () {
+    setNav(toggle.getAttribute("aria-expanded") !== "true");
+  });
+
+  nav.addEventListener("click", function (e) {
+    if (e.target.closest("a")) setNav(false);
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") {
+      setNav(false);
+      toggle.focus();
+    }
+  });
+
+  /* ---- form placeholder handling ----
+     Only intercepts while the form has no real action URL.
+     Once you point action= at Formspree/Netlify, delete this block. */
+  var form = document.getElementById("consult-form");
+  var status = document.getElementById("form-status");
+
+  form.addEventListener("submit", function (e) {
+    var action = form.getAttribute("action");
+    if (action && action !== "#") return; // real endpoint configured — let it post
+
+    e.preventDefault();
+
+    var name = form.elements.name.value.trim();
+    var phone = form.elements.phone.value.trim();
+
+    if (!name || !phone) {
+      status.textContent = "Please add your name and a phone number so we can reach you.";
+      status.hidden = false;
+      (!name ? form.elements.name : form.elements.phone).focus();
+      return;
+    }
+
+    status.innerHTML =
+      "Thank you, " + name.replace(/[<>&]/g, "") +
+      ". <strong>Note for the site owner:</strong> this form is not connected to an inbox yet — " +
+      "see the setup comment in the page source. Until then, calls and emails come through normally.";
+    status.hidden = false;
+  });
+})();
+</script>
+
+<script>
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && window.parent !== window) {
+    window.parent.postMessage({ type: 'close-fullscreen' }, '*');
+  }
+});
+</script>
+<!-- broken-img-handler -->
+<script>
+(function(){
+  if(window.__brokenImgHandler)return;
+  window.__brokenImgHandler=true;
+  var MAX=5,DELAYS=[2000,4000,8000,16000,32000];
+  var TOKEN=/^__(?:IMG|EMBED)_[a-zA-Z0-9_-]+__/;
+  var SENTINEL=new RegExp('^/api/published/[^/]+/(?:assets|embeds)/[^/?#]*-missing(?:[?#]|$)');
+  var NOISE=/^[\s\u2018\u2019\u201c\u201d]+|[\s\u2018\u2019\u201c\u201d]+$/g;
+  function canSrcEverResolve(src){
+    var bare=src.replace(NOISE,'');
+    return !TOKEN.test(bare)&&!SENTINEL.test(bare);
+  }
+  document.addEventListener('error',function(e){
+    var img=e.target;
+    if(!img||img.tagName!=='IMG')return;
+    var liveSrc=img.getAttribute('src');
+    var src=img.dataset.haOriginalSrc||liveSrc;
+    if(!src)return;
+    if(img.dataset.haOriginalSrc&&liveSrc&&liveSrc!==img.dataset.haOriginalSrc&&liveSrc.indexOf('_r=')<0){src=liveSrc;img.dataset.haOriginalSrc=src;img.dataset.haRetryCount='0'}
+    else if(!img.dataset.haOriginalSrc){img.dataset.haOriginalSrc=src}
+    var attempt=canSrcEverResolve(src)?parseInt(img.dataset.haRetryCount||'0',10):MAX;
+    if(img.dataset.haPhId){var old=document.getElementById(img.dataset.haPhId);if(old)old.remove()}
+    var ph=document.createElement('div');
+    ph.className='ha-img-placeholder'+(attempt>=MAX?' ha-failed':'');
+    ph.id='ha-ph-'+Math.random().toString(36).slice(2,9);
+    var w=img.getAttribute('width');var h=img.getAttribute('height');
+    if(w)ph.style.width=w+(isNaN(Number(w))?'':'px');
+    else if(img.style.width)ph.style.width=img.style.width;
+    else if(img.width>1)ph.style.width=img.width+'px';
+    if(h)ph.style.height=h+(isNaN(Number(h))?'':'px');
+    else if(img.style.height)ph.style.height=img.style.height;
+    else if(img.height>1)ph.style.height=img.height+'px';
+    ph.textContent=attempt>=MAX?'Image unavailable':'Loading image\u2026';
+    img.dataset.haPhId=ph.id;
+    if(img.dataset.haOrigDisplay==null)img.dataset.haOrigDisplay=img.style.display||'';
+    img.style.display='none';
+    img.insertAdjacentElement('afterend',ph);
+    if(attempt<MAX){
+      img.dataset.haRetryCount=String(attempt+1);
+      setTimeout(function(){
+        if(!img.isConnected)return;
+        if(img.dataset.haOriginalSrc!==src)return;
+        if(img.complete&&img.naturalWidth>0)return;
+        var curSrc=img.getAttribute('src');
+        if(curSrc&&curSrc.indexOf(src)!==0)return;
+        var fresh=src+(src.indexOf('?')>=0?'&':'?')+'_r='+(attempt+1)+'_'+Date.now();
+        img.src=fresh;
+      },DELAYS[attempt]);
+    }
+  },true);
+  document.addEventListener('load',function(e){
+    var img=e.target;
+    if(!img||img.tagName!=='IMG')return;
+    if(img.dataset.haPhId){
+      var ph=document.getElementById(img.dataset.haPhId);
+      if(ph)ph.remove();
+      delete img.dataset.haPhId;
+      img.style.display=img.dataset.haOrigDisplay||'';
+      delete img.dataset.haOrigDisplay;
+      delete img.dataset.haOriginalSrc;
+      delete img.dataset.haRetryCount;
+    }
+  },true);
+})();
+</script>
+</body>
+</html>
