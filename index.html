@@ -39,7 +39,7 @@
   1. PHONE — appears 4x: JSON-LD, header CTA area, Contact section, footer.
      Currently: (425) 555-0100   /   tel:+14255550100
   2. EMAIL — appears 3x: JSON-LD, Contact section, footer.
-     Currently: hello@geenieestateservices.com
+     Currently: contact@geenieservices.com
   3. OWNER PORTRAIT — summer-portrait.jpg
   4. GALLERY PHOTOS — the three gallery-*.jpg files.
      Replace with real job photos (with client permission) as soon as
@@ -48,9 +48,10 @@
      It is deliberately worded in general terms right now.
   6. CONTACT FORM — the form does not send anywhere yet. See the
      comment above the <form> tag for the two options to wire it up.
-  7. DOMAIN — update og:url, og:image, canonical, and JSON-LD "url"
-     once the real domain is live. og:image must be a full absolute
-     URL (https://yourdomain.com/hero-sorting-keepsakes.jpg) — relative paths do not
+  7. DOMAIN — set to geenieservices.com (canonical, og:url, og:image,
+     and JSON-LD "url"). If the site ends up on a bare domain with no
+     "www", change all four to match exactly how it actually resolves.
+     og:image must stay a full absolute URL — relative paths do not
      work for social media link previews.
 
   Deliberately NOT on this page: NASMM claims, insurance/bonding claims,
@@ -61,14 +62,14 @@
 <title>Senior Move Management in Snohomish County | Geenie Estate Services</title>
 <meta name="description" content="Compassionate senior move management and estate sale services in Snohomish County, WA. We handle downsizing, packing, movers, unpacking, and estate sales in Everett, Edmonds, Lynnwood and the greater Seattle area. Free consultation.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.geenieestateservices.com/">
+<link rel="canonical" href="https://www.geenieservices.com/">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Senior Move Management in Snohomish County | Geenie Estate Services">
 <meta property="og:description" content="One trusted person to plan, sort, pack, and settle you into your new home — plus estate sale coordination across Snohomish County and greater Seattle.">
-<meta property="og:url" content="https://www.geenieestateservices.com/">
+<meta property="og:url" content="https://www.geenieservices.com/">
 <!-- og:image MUST be an absolute URL — update the domain when the site goes live -->
-<meta property="og:image" content="https://www.geenieestateservices.com/hero-sorting-keepsakes.jpg">
+<meta property="og:image" content="https://www.geenieservices.com/hero-sorting-keepsakes.jpg">
 <meta property="og:locale" content="en_US">
 <meta name="theme-color" content="#0B2559">
 <meta name="twitter:card" content="summary_large_image">
@@ -87,9 +88,9 @@
   "additionalType": "https://schema.org/MovingCompany",
   "name": "Geenie Estate Services",
   "description": "Senior move management and estate sale services for older adults and their families in Snohomish County and the greater Seattle area.",
-  "url": "https://www.geenieestateservices.com/",
+  "url": "https://www.geenieservices.com/",
   "telephone": "+1-425-555-0100",
-  "email": "hello@geenieestateservices.com",
+  "email": "contact@geenieservices.com",
   "founder": { "@type": "Person", "name": "Summer Gee" },
   "priceRange": "Free consultation",
   "address": {
@@ -872,7 +873,7 @@ a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
             <span>
               <span class="contact-line__label">Email</span>
               <!-- PLACEHOLDER EMAIL -->
-              <a href="mailto:hello@geenieestateservices.com">hello@geenieestateservices.com</a>
+              <a href="mailto:contact@geenieservices.com">contact@geenieservices.com</a>
             </span>
           </div>
 
@@ -899,7 +900,7 @@ a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
            and delete the <script> block that intercepts the submit.
 
         B) Quick interim fix:
-           <form action="mailto:hello@geenieestateservices.com" method="POST" enctype="text/plain">
+           <form action="mailto:contact@geenieservices.com" method="POST" enctype="text/plain">
            (works, but opens the visitor's email client — less reliable.)
       -->
       <div class="form-card">
@@ -963,7 +964,7 @@ a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
         <ul class="footer-list">
           <!-- PLACEHOLDER PHONE + EMAIL -->
           <li><a href="tel:+14255550100">(425) 555-0100</a></li>
-          <li><a href="mailto:hello@geenieestateservices.com">hello@geenieestateservices.com</a></li>
+          <li><a href="mailto:contact@geenieservices.com">contact@geenieservices.com</a></li>
           <li><a href="#contact">Free consultation</a></li>
         </ul>
       </div>
